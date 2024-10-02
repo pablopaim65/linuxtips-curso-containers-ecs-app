@@ -62,5 +62,5 @@ module "service" {
   alb_arn                 = data.aws_ssm_parameter.alb.value
   scale_tracking_requests = var.scale_tracking_requests
 
-#  service_discovery_namespace = data.aws_ssm_parameter.service_discovery_namespace.value
+  #  service_discovery_namespace = data.aws_ssm_parameter.service_discovery_namespace.value
 }
