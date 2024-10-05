@@ -6,7 +6,7 @@ on:
       - dev
 
 env:
-  AWS_ACCOUNT: "181560427716"
+  AWS_ACCOUNT: "881490121151"
   AWS_REGION: "us-east-1"
   APP_NAME: "linuxtips-app"
   CLUSTER_NAME: "linuxtips-ecs-cluster"
