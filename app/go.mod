@@ -1,11 +1,11 @@
 module app
 
-go 1.22.2
+go 1.22.4
 
 require (
 	github.com/go-playground/assert/v2 v2.2.0
 	github.com/gofiber/fiber/v2 v2.52.5
-	github.com/google/uuid v1.6.0
+	github.com/google/uuid v1.5.0
 )
 
 require (
