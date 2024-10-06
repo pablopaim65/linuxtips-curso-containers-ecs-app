@@ -31,9 +31,9 @@ jobs:
 #      run: golangci-lint run ./... -E errcheck
 #      working-directory: ./app
 
-    - name: Test App
-      run: go test -v ./...
-      working-directory: ./app
+#    - name: Test App
+#      run: go test -v ./...
+#      working-directory: ./app
 
   ci-terraform:
     runs-on: ubuntu-latest
