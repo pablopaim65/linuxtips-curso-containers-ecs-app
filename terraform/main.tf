@@ -25,6 +25,17 @@ module "service" {
 
   capabilities = var.capabilities
 
+  secrets = [
+    {
+      name      = "VARIAVEL_COM_VALOR_DO_SSM"
+      valueFrom = aws_ssm_parameter.teste.arn
+    },
+    {
+      name      = "VARIAVEL_COM_VALOR_DO_SECRETS"
+      valueFrom = aws_secretsmanager_secret.teste.arn
+    }
+  ]
+
   vpc_id = data.aws_ssm_parameter.vpc_id.value
   private_subnets = [
     data.aws_ssm_parameter.private_subnet_1.value,
