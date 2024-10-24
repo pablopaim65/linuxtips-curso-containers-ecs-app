@@ -16,8 +16,8 @@ module "service" {
   service_launch_type         = var.service_launch_type
   service_task_count          = var.service_task_count
   service_hosts               = var.service_hosts
-#  ssm_listener                = data.aws_ssm_parameter.listener.value
-#  ssm_vpc_id                  = data.aws_ssm_parameter.vpc_id.value
+  #  ssm_listener                = data.aws_ssm_parameter.listener.value
+  #  ssm_vpc_id                  = data.aws_ssm_parameter.vpc_id.value
 
   container_image = var.container_image
 
