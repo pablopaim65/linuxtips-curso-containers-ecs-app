@@ -1,8 +1,6 @@
 module "service" {
   source = "github.com/msfidelis/linuxtips-curso-containers-ecs-service-module?ref=v1.3.0"
   #source = "/home/pablo/linuxtips-curso-containers-ecs-service-module"
-  #source = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.1.0"
-  #source = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.2.1"
   # source                      = "/Users/matheus/Workspace/linuxtips/linuxtips-curso-containers-ecs-service-module"
   region                      = var.region
   cluster_name                = var.cluster_name
@@ -16,15 +14,10 @@ module "service" {
   service_launch_type         = var.service_launch_type
   service_task_count          = var.service_task_count
   service_hosts               = var.service_hosts
-  #  ssm_listener                = data.aws_ssm_parameter.listener.value
-  #  ssm_vpc_id                  = data.aws_ssm_parameter.vpc_id.value
 
   container_image = var.container_image
 
   environment_variables = var.environment_variables
-
-
-  capabilities = var.capabilities
 
   secrets = [
     {
@@ -36,6 +29,8 @@ module "service" {
       valueFrom = aws_secretsmanager_secret.teste.arn
     }
   ]
+
+  capabilities = var.capabilities
 
   vpc_id = data.aws_ssm_parameter.vpc_id.value
   private_subnets = [
@@ -53,6 +48,7 @@ module "service" {
       read_only        = false
     }
   ]
+
   # Autoscaling
 
   scale_type = var.scale_type
@@ -85,3 +81,5 @@ module "service" {
 
   service_discovery_namespace = data.aws_ssm_parameter.service_discovery_namespace.value
 }
+
+
