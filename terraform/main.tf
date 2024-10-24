@@ -1,7 +1,7 @@
 module "service" {
   source = "github.com/msfidelis/linuxtips-curso-containers-ecs-service-module?ref=v1.3.0"
   #source = "/home/pablo/linuxtips-curso-containers-ecs-service-module"
- # source                      = "/Users/matheus/Workspace/linuxtips/linuxtips-curso-containers-ecs-service-module"
+  # source                      = "/Users/matheus/Workspace/linuxtips/linuxtips-curso-containers-ecs-service-module"
   region                      = var.region
   cluster_name                = var.cluster_name
   service_name                = var.service_name
@@ -32,12 +32,12 @@ module "service" {
 
   capabilities = var.capabilities
 
- # vpc_id = data.aws_ssm_parameter.vpc_id.value
- # private_subnets = [
- #   data.aws_ssm_parameter.private_subnet_1.value,
- #   data.aws_ssm_parameter.private_subnet_2.value,
- #   data.aws_ssm_parameter.private_subnet_3.value,
- # ]
+  # vpc_id = data.aws_ssm_parameter.vpc_id.value
+  # private_subnets = [
+  #   data.aws_ssm_parameter.private_subnet_1.value,
+  #   data.aws_ssm_parameter.private_subnet_2.value,
+  #   data.aws_ssm_parameter.private_subnet_3.value,
+  # ]
 
   efs_volumes = [
     {
