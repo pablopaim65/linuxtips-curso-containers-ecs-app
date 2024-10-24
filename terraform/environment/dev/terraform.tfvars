@@ -35,9 +35,10 @@ ssm_private_subnet_2 = "/linuxtips-vpc/vpc/subnet_private_1b"
 ssm_private_subnet_3 = "/linuxtips-vpc/vpc/subnet_private_1c"
 
 service_hosts = [
-  #  "app.linuxtips.demo"
+  # "app.linuxtips.demo",
   "app.linuxtips-ecs-cluster.internal.com"
 ]
+
 environment_variables = [
   {
     name  = "FOO",
