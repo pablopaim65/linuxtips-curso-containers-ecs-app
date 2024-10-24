@@ -32,7 +32,7 @@ module "service" {
 
   capabilities = var.capabilities
 
-  ssm_vpc_id = data.aws_ssm_parameter.vpc_id.value
+  vpc_id = data.aws_ssm_parameter.vpc_id.value
   private_subnets = [
     data.aws_ssm_parameter.private_subnet_1.value,
     data.aws_ssm_parameter.private_subnet_2.value,
