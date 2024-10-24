@@ -1,6 +1,6 @@
 module "service" {
-  #  source = "github.com/msfidelis/linuxtips-curso-containers-ecs-service-module?ref=v1.3.0"
-  source = "/home/pablo/linuxtips-curso-containers-ecs-service-module"
+  source = "github.com/msfidelis/linuxtips-curso-containers-ecs-service-module?ref=v1.3.0"
+  #source = "/home/pablo/linuxtips-curso-containers-ecs-service-module"
   #source = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.1.0"
   #source = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.2.1"
   # source                      = "/Users/matheus/Workspace/linuxtips/linuxtips-curso-containers-ecs-service-module"
