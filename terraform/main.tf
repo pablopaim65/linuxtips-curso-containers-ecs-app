@@ -1,8 +1,5 @@
 module "service" {
-  #source = "/home/pablo/linuxtips-curso-containers-ecs-service-module"
-  source = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.4.3"
-  #source = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.2.1"
-  # source                      = "/Users/matheus/Workspace/linuxtips/linuxtips-curso-containers-ecs-service-module"
+  source                      = "github.com/pablopaim65/linuxtips-curso-containers-ecs-service-module?ref=v1.4.3"
   region                      = var.region
   cluster_name                = var.cluster_name
   service_name                = var.service_name
